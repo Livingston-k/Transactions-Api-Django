@@ -5,7 +5,9 @@ from rest_framework import routers
 router = routers.SimpleRouter()
 router.register(r'categories', CoreViews.CategoryModelViewSet,
                 basename='category')
-router.register(r'transactions', CoreViews.TransactionModelViewSet,
+router.register(r'user_transactions', CoreViews.UserTransactionModelViewSet,
+                basename='transactions')
+router.register(r'alltransactions', CoreViews.AllTransactionModelViewSet,
                 basename='transactions')
 
 urlpatterns = [
